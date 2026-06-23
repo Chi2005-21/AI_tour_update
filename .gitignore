@@ -1,0 +1,34 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+build/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+data/qdrant/
+data/models/
+
+# OS
+.DS_Store
+
+# AI logs — tracked structure, ignored content
+.ai-log/*.jsonl
+
+# Local vector DB — COMMIT để người pull về chạy ngay (khỏi re-embedding).
+# Chỉ bỏ qua file lock runtime + DB lạc chỗ (vd chạy nhầm cwd trong scripts/).
+qdrant_data/.lock
+scripts/qdrant_data/
+
+# Generated TTS audio (regenerate qua voice.py)
+data/audio/
+
+# Editor
+.vscode/
+
+.ai-log/
